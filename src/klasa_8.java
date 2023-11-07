@@ -12,14 +12,12 @@ public class klasa_8 extends klasa_1 {
                 System.out.println("mały tick");
             }
         });
-
         duzyTickBehaviour = new TickerBehaviour(this, 5000) {
             protected void onTick() {
                 System.out.println("duży tick");
             }
         };
         addBehaviour(duzyTickBehaviour);
-
         addBehaviour(new WakerBehaviour(this, 50000) {
             protected void onWake() {
                 removeBehaviour(duzyTickBehaviour);
